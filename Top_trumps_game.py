@@ -19,9 +19,14 @@ def intro():
     print("Welcome to the Top Trumps game, made by Jam and Chen.")
     print("\nIn this game, you compare different \"skills\" for each card to determine the best.")
     print("\nYou have 7 seconds now to decide who wants to be player 1. BE WARNED. Player 1 always loses in a draw.")
-    tm.sleep(7)
+    for i in range(0,7): ## countdown
+        if i == 6:
+            print((7-i), "second left.")
+        else:
+            print((7-i), "seconds left.")
+        tm.sleep(1)
     print("\nLet the games begin!" )
-    tm.sleep(0.5)
+    tm.sleep(1)
 
 
 def make_cards(Players, Names, Parameters):
